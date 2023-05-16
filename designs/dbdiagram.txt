@@ -1,0 +1,35 @@
+// Site: https://dbdiagram.io
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table users {
+  id integer [primary key]
+  username varchar
+  password varchar
+  fullname varchar
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table todo_lists {
+  id integer [primary key]
+  user_id integer
+  name varchar
+  description varchar
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table todo_items {
+  id integer [primary key]
+  list_id integer
+  name varchar
+  description varchar
+  status boolean [note: 'True = Finished, False = Unfinished']
+  created_at timestamp
+  updated_at timestamp
+}
+
+
+Ref: "users"."id" < "todo_lists"."user_id"
+
+Ref: "todo_lists"."id" < "todo_items"."list_id"

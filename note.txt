@@ -1,0 +1,29 @@
+Auth:
+  login
+  signup
+  change username
+  change password
+  change fullname
+  logout
+
+Main Menu:
+  see tasklist
+  select tasklist
+  create tasklist
+  undo/redo
+
+Tasklist Menu:
+  change tasklist name
+  change tasklist description
+  delete tasklist
+  
+  see tasks
+  select tasks
+  create task
+
+Task Menu:
+  change task name
+  change task description
+  toggle status
+  delete task
+  undo/redo
