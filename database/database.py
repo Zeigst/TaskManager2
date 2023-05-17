@@ -12,4 +12,11 @@ def create_session():
     session = Session()
     return session
 
+def access_database():
+    session = create_session()
+    try:
+        yield session
+    finally:
+        session.close()
+
 create_database()

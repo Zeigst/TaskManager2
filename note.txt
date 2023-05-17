@@ -27,3 +27,4 @@ Task Menu:
   toggle status
   delete task
   undo/redo
+
